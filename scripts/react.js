@@ -34,10 +34,10 @@ var INIT_TIMEOUT = process.env.HUBOT_REACT_INIT_TIMEOUT ? parseInt(process.env.H
 
 var lastUsedResponse = null;
 
-var successTmpl = _.template('Reacting to <%= term %> with <%= response %>');
+var successTmpl = _.template("Okay, I'll react to <%= term %> with <%= response %>");
 var responseTmpl = _.template('<%= response %>');
-var ignoredTmpl = _.template('No longer reacting to <%= term %> with <%= response %>');
-var lastResponseNotFoundTmpl = _.template('Wat.');
+var ignoredTmpl = _.template("Done, I'll no longer react to <%= term %> with <%= response %>");
+var lastResponseNotFoundTmpl = _.template("Uh oh! I can't find my last response");
 
 function randomItem(list) {
   return list[_.random(list.length - 1)];
